@@ -1,7 +1,15 @@
 {
   "name": "suitcss-utils-before",
   "description": "Leading offset utilities for SUIT CSS",
-  "version": "0.2.0",
+  "version": "0.2.2",
+  "style": "before.css",
+  "files": [
+    "before.css",
+    "before-sm.css",
+    "before-md.css",
+    "before-lg.css",
+    "component.json"
+  ],
   "devDependencies": {
     "component": "0.19.x",
     "component-builder-suit": "0.2.x",
