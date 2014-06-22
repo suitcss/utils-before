@@ -1,5 +1,10 @@
 === HEAD
 
+=== 0.3.0 (June 21, 2014)
+
+* npm-based workflow.
+* Add new preprocessor build tool.
+
 === 0.2.2 (March 26, 2014)
 
 * Remove MQ files from component.json (6d22c69).
