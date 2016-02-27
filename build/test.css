@@ -1,7 +1,5 @@
 /** @define Test */
 
-/*! suitcss-components-test v0.1.1 | MIT License | github.com/suitcss */
-
 /**
  * The 'describe' CSS counter
  */
@@ -10,7 +8,7 @@
   counter-reset: test-describe;
 }
 
-.Test-describe:before {
+.Test-describe::before {
   content: counter(test-describe);
   counter-increment: test-describe;
 }
@@ -23,7 +21,7 @@
   counter-reset: test-it;
 }
 
-.Test-it:before {
+.Test-it::before {
   content: counter(test-describe) "." counter(test-it);
   counter-increment: test-it;
 }
@@ -33,12 +31,12 @@
  */
 
 .Test-title {
-  font-size: 2em;
-  font-family: sans-serif;
-  padding: 20px;
-  margin: 20px 0;
   background: #eee;
   color: #999;
+  font-family: sans-serif;
+  font-size: 2em;
+  margin: 20px 0;
+  padding: 20px;
 }
 
 /**
@@ -65,8 +63,8 @@
  * The counter styles
  */
 
-.Test-describe:before,
-.Test-it:before {
+.Test-describe::before,
+.Test-it::before {
   color: #999;
   display: inline-block;
   margin-right: 10px;
@@ -75,13 +73,14 @@
 }
 
 /**
+ * @define utilities
  * Specify the proportional offset before an object.
  * Intentional redundancy build into each set of unit classes.
  * Supports: 2, 3, 4, 5, 6, 8, 10, 12 section
  */
 
 .u-before1of12 {
-  margin-left: 8.333333333333332% !important;
+  margin-left: 8.33333% !important;
 }
 
 .u-before1of10 {
@@ -94,7 +93,7 @@
 
 .u-before1of6,
 .u-before2of12 {
-  margin-left: 16.666666666666664% !important;
+  margin-left: 16.66667% !important;
 }
 
 .u-before1of5,
@@ -115,7 +114,7 @@
 .u-before1of3,
 .u-before2of6,
 .u-before4of12 {
-  margin-left: 33.33333333333333% !important;
+  margin-left: 33.33333% !important;
 }
 
 .u-before3of8 {
@@ -128,7 +127,7 @@
 }
 
 .u-before5of12 {
-  margin-left: 41.66666666666667% !important;
+  margin-left: 41.66667% !important;
 }
 
 .u-before1of2,
@@ -141,7 +140,7 @@
 }
 
 .u-before7of12 {
-  margin-left: 58.333333333333336% !important;
+  margin-left: 58.33333% !important;
 }
 
 .u-before3of5,
@@ -156,7 +155,7 @@
 .u-before2of3,
 .u-before4of6,
 .u-before8of12 {
-  margin-left: 66.66666666666666% !important;
+  margin-left: 66.66667% !important;
 }
 
 .u-before7of10 {
@@ -176,7 +175,7 @@
 
 .u-before5of6,
 .u-before10of12 {
-  margin-left: 83.33333333333334% !important;
+  margin-left: 83.33333% !important;
 }
 
 .u-before7of8 {
@@ -188,10 +187,11 @@
 }
 
 .u-before11of12 {
-  margin-left: 91.66666666666666% !important;
+  margin-left: 91.66667% !important;
 }
 
 /**
+ * @define utilities
  * Offset: breakpoint 1 (small)
  *
  * Specify the proportional offset before an element.
@@ -200,12 +200,13 @@
  */
 
 @media (min-width:320px) and (max-width:640px) {
+
   .u-sm-beforeNone {
     margin-left: 0 !important;
   }
 
   .u-sm-before1of12 {
-    margin-left: 8.333333333333332% !important;
+    margin-left: 8.33333% !important;
   }
 
   .u-sm-before1of10 {
@@ -218,7 +219,7 @@
 
   .u-sm-before1of6,
   .u-sm-before2of12 {
-    margin-left: 16.666666666666664% !important;
+    margin-left: 16.66667% !important;
   }
 
   .u-sm-before1of5,
@@ -239,7 +240,7 @@
   .u-sm-before1of3,
   .u-sm-before2of6,
   .u-sm-before4of12 {
-    margin-left: 33.33333333333333% !important;
+    margin-left: 33.33333% !important;
   }
 
   .u-sm-before3of8 {
@@ -252,7 +253,7 @@
   }
 
   .u-sm-before5of12 {
-    margin-left: 41.66666666666667% !important;
+    margin-left: 41.66667% !important;
   }
 
   .u-sm-before1of2,
@@ -265,7 +266,7 @@
   }
 
   .u-sm-before7of12 {
-    margin-left: 58.333333333333336% !important;
+    margin-left: 58.33333% !important;
   }
 
   .u-sm-before3of5,
@@ -280,7 +281,7 @@
   .u-sm-before2of3,
   .u-sm-before4of6,
   .u-sm-before8of12 {
-    margin-left: 66.66666666666666% !important;
+    margin-left: 66.66667% !important;
   }
 
   .u-sm-before7of10 {
@@ -300,7 +301,7 @@
 
   .u-sm-before5of6,
   .u-sm-before10of12 {
-    margin-left: 83.33333333333334% !important;
+    margin-left: 83.33333% !important;
   }
 
   .u-sm-before7of8 {
@@ -312,11 +313,13 @@
   }
 
   .u-sm-before11of12 {
-    margin-left: 91.66666666666666% !important;
+    margin-left: 91.66667% !important;
   }
+
 }
 
 /**
+ * @define utilities
  * Offset: breakpoint 2 (medium)
  *
  * Specify the proportional offset before an element.
@@ -325,12 +328,13 @@
  */
 
 @media (min-width:640px) and (max-width:960px) {
+
   .u-md-beforeNone {
     margin-left: 0 !important;
   }
 
   .u-md-before1of12 {
-    margin-left: 8.333333333333332% !important;
+    margin-left: 8.33333% !important;
   }
 
   .u-md-before1of10 {
@@ -343,7 +347,7 @@
 
   .u-md-before1of6,
   .u-md-before2of12 {
-    margin-left: 16.666666666666664% !important;
+    margin-left: 16.66667% !important;
   }
 
   .u-md-before1of5,
@@ -364,7 +368,7 @@
   .u-md-before1of3,
   .u-md-before2of6,
   .u-md-before4of12 {
-    margin-left: 33.33333333333333% !important;
+    margin-left: 33.33333% !important;
   }
 
   .u-md-before3of8 {
@@ -377,7 +381,7 @@
   }
 
   .u-md-before5of12 {
-    margin-left: 41.66666666666667% !important;
+    margin-left: 41.66667% !important;
   }
 
   .u-md-before1of2,
@@ -390,7 +394,7 @@
   }
 
   .u-md-before7of12 {
-    margin-left: 58.333333333333336% !important;
+    margin-left: 58.33333% !important;
   }
 
   .u-md-before3of5,
@@ -405,7 +409,7 @@
   .u-md-before2of3,
   .u-md-before4of6,
   .u-md-before8of12 {
-    margin-left: 66.66666666666666% !important;
+    margin-left: 66.66667% !important;
   }
 
   .u-md-before7of10 {
@@ -425,7 +429,7 @@
 
   .u-md-before5of6,
   .u-md-before10of12 {
-    margin-left: 83.33333333333334% !important;
+    margin-left: 83.33333% !important;
   }
 
   .u-md-before7of8 {
@@ -437,11 +441,13 @@
   }
 
   .u-md-before11of12 {
-    margin-left: 91.66666666666666% !important;
+    margin-left: 91.66667% !important;
   }
+
 }
 
 /**
+ * @define utilities
  * Offset: breakpoint 3 (large)
  *
  * Specify the proportional offset before an element.
@@ -450,12 +456,13 @@
  */
 
 @media (min-width:960px) {
+
   .u-lg-beforeNone {
     margin-left: 0 !important;
   }
 
   .u-lg-before1of12 {
-    margin-left: 8.333333333333332% !important;
+    margin-left: 8.33333% !important;
   }
 
   .u-lg-before1of10 {
@@ -468,7 +475,7 @@
 
   .u-lg-before1of6,
   .u-lg-before2of12 {
-    margin-left: 16.666666666666664% !important;
+    margin-left: 16.66667% !important;
   }
 
   .u-lg-before1of5,
@@ -489,7 +496,7 @@
   .u-lg-before1of3,
   .u-lg-before2of6,
   .u-lg-before4of12 {
-    margin-left: 33.33333333333333% !important;
+    margin-left: 33.33333% !important;
   }
 
   .u-lg-before3of8 {
@@ -502,7 +509,7 @@
   }
 
   .u-lg-before5of12 {
-    margin-left: 41.66666666666667% !important;
+    margin-left: 41.66667% !important;
   }
 
   .u-lg-before1of2,
@@ -515,7 +522,7 @@
   }
 
   .u-lg-before7of12 {
-    margin-left: 58.333333333333336% !important;
+    margin-left: 58.33333% !important;
   }
 
   .u-lg-before3of5,
@@ -530,7 +537,7 @@
   .u-lg-before2of3,
   .u-lg-before4of6,
   .u-lg-before8of12 {
-    margin-left: 66.66666666666666% !important;
+    margin-left: 66.66667% !important;
   }
 
   .u-lg-before7of10 {
@@ -550,7 +557,7 @@
 
   .u-lg-before5of6,
   .u-lg-before10of12 {
-    margin-left: 83.33333333333334% !important;
+    margin-left: 83.33333% !important;
   }
 
   .u-lg-before7of8 {
@@ -562,6 +569,8 @@
   }
 
   .u-lg-before11of12 {
-    margin-left: 91.66666666666666% !important;
+    margin-left: 91.66667% !important;
   }
+
 }
+
